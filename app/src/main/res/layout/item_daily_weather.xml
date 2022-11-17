@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/weather_bg"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="25dp"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234">
+
+        <ImageView
+            android:id="@+id/iv_clouds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_temp_night"
+            app:layout_constraintEnd_toStartOf="@+id/tv_temp_day"
+            app:layout_constraintStart_toEndOf="@+id/tv_day_of_week"
+            app:layout_constraintTop_toTopOf="@+id/tv_temp_day" />
+
+        <TextView
+            android:id="@+id/tv_temp_night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 C"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_temp_day"
+            app:layout_constraintStart_toEndOf="@+id/iv_clouds"
+            app:layout_constraintTop_toBottomOf="@+id/tv_temp_day" />
+
+        <TextView
+            android:id="@+id/tv_temp_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="30 C"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_clouds"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_day_of_week"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Monday"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_clouds"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_temp_day" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18.01"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_day_of_week"
+            app:layout_constraintTop_toBottomOf="@+id/tv_day_of_week" />
+
+
+        <TextView
+            android:id="@+id/tv_wind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Wind"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_wind_value"
+            app:layout_constraintEnd_toStartOf="@+id/tv_humidity"
+            app:layout_constraintStart_toEndOf="@+id/tv_pressure"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+        <TextView
+            android:id="@+id/tv_wind_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="15"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_wind"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wind" />
+
+        <TextView
+            android:id="@+id/tv_wind_now_value_ext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m/s"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_wind_value" />
+
+        <TextView
+            android:id="@+id/tv_humidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind"
+            app:layout_constraintEnd_toEndOf="@+id/tv_temp_day"
+            app:layout_constraintStart_toEndOf="@+id/tv_wind"
+            app:layout_constraintTop_toTopOf="@+id/tv_wind" />
+
+        <TextView
+            android:id="@+id/tv_humidity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="32"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_humidity"
+            app:layout_constraintStart_toStartOf="@+id/tv_humidity"
+            app:layout_constraintTop_toTopOf="@+id/tv_wind_value" />
+
+        <TextView
+            android:id="@+id/tv_humidity_value_ext"
+            android:layout_width="9dp"
+            android:layout_height="14dp"
+            android:text="%"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_humidity_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_humidity_value" />
+
+        <TextView
+            android:id="@+id/tv_pressure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pressure"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind"
+            app:layout_constraintEnd_toStartOf="@+id/tv_wind"
+            app:layout_constraintStart_toStartOf="@+id/tv_day_of_week"
+            app:layout_constraintTop_toTopOf="@+id/tv_wind" />
+
+        <TextView
+            android:id="@+id/tv_pressure_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1083"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_pressure"
+            app:layout_constraintStart_toStartOf="@+id/tv_pressure"
+            app:layout_constraintTop_toTopOf="@+id/tv_wind_value" />
+
+        <TextView
+            android:id="@+id/tv_pressure_value_ext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hPa"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_pressure_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_pressure_value" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/weather_bg"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="25dp"
+        app:flow_horizontalStyle="spread_inside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234">
+
+        <TextView
+            android:id="@+id/tv_daytime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="12:00"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_speed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="0dp"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:text="5.34 m/s"
+            app:layout_constraintBottom_toBottomOf="@id/tv_daytime"
+            app:layout_constraintEnd_toStartOf="@+id/tv_humidity_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_daytime"
+            app:layout_constraintTop_toTopOf="@+id/tv_daytime"
+            />
+
+        <TextView
+            android:id="@+id/tv_humidity_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="96"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_clouds"
+            app:layout_constraintStart_toEndOf="@+id/tv_speed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_clouds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_daytime"
+            app:layout_constraintEnd_toStartOf="@+id/tv_temp_day"
+            app:layout_constraintStart_toEndOf="@+id/tv_humidity_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_daytime" />
+
+        <TextView
+            android:id="@+id/tv_temp_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20 C"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_daytime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_clouds"
+            app:layout_constraintTop_toTopOf="@id/tv_daytime" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

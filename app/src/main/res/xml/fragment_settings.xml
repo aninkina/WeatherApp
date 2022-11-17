@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="wifi"
+        android:summary="summary Settings 1"
+        android:title="Настройка 1" />/>
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="hints"
+        android:summary="summary Settings 2"
+        android:title="Настройка 2" />
+
+</PreferenceScreen>
